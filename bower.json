@@ -1,7 +1,8 @@
 {
-	"name": "package",
-	"version": "0.0.0",
-	"dependencies": {
-		"mithril": "~0.2.0"
-	}
+  "name": "package",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "jQuery": "~2.2.0"
+  }
 }

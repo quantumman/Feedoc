@@ -1,0 +1,12 @@
+extends: airbnb/base
+plugins:
+  - react
+rules:
+  no-unused-vars:
+    - 2
+    - args: after-used
+      argsIgnorePattern: ^_
+globals:
+  m: true,
+  $: true,
+  jQuery: true
