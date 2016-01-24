@@ -1,0 +1,21 @@
+@import 'common';
+
+.fixed-menu-top {
+    @include fixed;
+    width: 100%;
+    height: $menu-size;
+
+    background-color: #DDD;
+}
+
+.fixed-menu-left {
+    @include fixed;
+    width: $menu-size;
+    height: 100%;
+
+    background-color: #CCC;
+}
+
+.content {
+    margin: $menu-size 0 0 $menu-size;
+}
