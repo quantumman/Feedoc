@@ -1,0 +1,10 @@
+@import 'common';
+
+ul.vertical-menu {
+    @include list-style-none;
+}
+
+.menu-item {
+    width: $menu-size;
+    height: $menu-size;
+}
