@@ -1,12 +1,23 @@
 import '../style/MenuButton.scss';
 
-export default {
-  controller() {
+const vm = {
+  init() {
   },
 
-  view() {
+  onclick() {
+    m.route('/list');
+  },
+};
+
+export default {
+  controller() {
+    this.vm = vm;
+    vm.init();
+  },
+
+  view(ctrl) {
     return (
-      <button type="button" class="btn btn-menu">
+      <button type="button" class="btn btn-menu" onclick={ctrl.vm.onclick}>
         <span class="glyphicon glyphicon-book glyphicon-large" aria-hidden="true">
         </span>
       </button>
