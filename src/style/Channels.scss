@@ -1,0 +1,42 @@
+@import 'common';
+
+.channels {
+    @include component;
+    @include fixed;
+    left: $menu-size;
+    top: $menu-size;
+
+    width: $channel-width;
+
+    .header {
+        padding: 0 0 0.5em 0.5em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .list {
+        @include list-style-none;
+
+        padding-left: 1.5em;
+        font-size: 1.1em;
+
+        $item-width: $channel-width - 50px;
+        .item {
+            a {
+                color: inherit;
+                display: block;
+                text-decoration: none;
+                width: $item-width;
+            }
+        }
+        .item:hover {
+            background: #EEE;
+            color: #000;
+            cursor: pointer;
+            width: $item-width;
+        }
+        .active {
+            background: #AAA;
+        }
+    }
+}
