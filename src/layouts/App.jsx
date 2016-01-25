@@ -1,4 +1,11 @@
+import 'css/bootstrap.css';
+import 'jquery';
+import 'js/bootstrap.js';
+
 import '../style/app.scss';
+
+import ListMenuItem from '../components/ListMenuItem.jsx';
+import VerticalMenu from './VerticalMenu.jsx';
 
 export default {
   controller() {
@@ -12,7 +19,10 @@ export default {
           top
         </div>
         <div class="fixed-menu-left">
-          left
+          <VerticalMenu>
+            <div></div>
+            <ListMenuItem />
+          </VerticalMenu>
         </div>
         <div class="content">
           {children}
