@@ -2,6 +2,7 @@ import '../style/app.scss';
 
 export default {
   controller() {
+    m.redraw.strategy('diff');
   },
 
   view(_ctrl, _args, children) {
