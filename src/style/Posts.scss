@@ -1,0 +1,5 @@
+@import 'common';
+
+.posts {
+    @include component;
+}
