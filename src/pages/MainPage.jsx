@@ -2,6 +2,7 @@ import '../style/MainPage.scss';
 
 import App from '../layouts/App.jsx';
 import Channels from '../components/Channels.jsx';
+import Post from '../components/Post.jsx';
 import Posts from '../components/Posts.jsx';
 
 import ChannelsModel from '../models/Channels.js';
@@ -36,7 +37,6 @@ export default {
   },
 
   view(ctrl) {
-    const Post = <div></div>;
     return (
       <App>
         <div class="main-page-container">
