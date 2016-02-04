@@ -50,7 +50,7 @@ export default {
             (() => {
               if (ctrl.params.postId) {
                 return <div class="post-item">
-                  <Post {...ctrl.params} />
+                  <Post {...ctrl.params} post={vm.post()} />
                 </div>;
               }
             })()
