@@ -4,8 +4,7 @@ export default {
 
   view() {
     return (
-      <div>
-      </div>
+      <MainPage />
     );
   },
 };
