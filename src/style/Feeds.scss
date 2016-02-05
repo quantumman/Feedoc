@@ -1,6 +1,6 @@
 @import 'common';
 
-.channels {
+.feeds {
     @include component;
     @include fixed;
     top: $menu-size;

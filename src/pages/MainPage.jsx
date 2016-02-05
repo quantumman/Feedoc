@@ -1,7 +1,7 @@
 import '../style/MainPage.scss';
 
 import App from '../layouts/App.jsx';
-import Channels from '../components/Channels.jsx';
+import Feeds from '../components/Feeds.jsx';
 import Post from '../components/Post.jsx';
 import Posts from '../components/Posts.jsx';
 
@@ -14,7 +14,7 @@ export default {
       <App>
         <div class="main-page-container">
           <div class="channels-item">
-            <Channels {...props} />
+            <Feeds {...props} />
           </div>
           <div class="posts-item">
             <Posts {...props} />

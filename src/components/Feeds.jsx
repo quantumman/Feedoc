@@ -1,4 +1,4 @@
-import '../style/Channels.scss';
+import '../style/Feeds.scss';
 
 const vm = {
   init() {
@@ -12,19 +12,19 @@ export default {
 
   view(_ctrl, args) {
     return (
-      <div class="channels">
+      <div class="feeds">
         <h4 class="header">
-          CHANNELS <span>({args.channels.length})</span>
+          CHANNELS <span>({args.feeds().length})</span>
         </h4>
         <ul class="list">
         {
-          args.channels().map(c => {
+          args.feeds().map(f => {
             return (
-              <li class="item" key={c.id}>
-                <a className={c.id === args.params.channelId && 'active'}
-                   href={`/channels/${c.id}`}
+              <li class="item" key={f.id}>
+                <a className={f.id === args.params.feedId && 'active'}
+                   href={`/feeds/${f.id}`}
                    config={m.route}>
-                  # {c.name}
+                  # {f.name}
                 </a>
               </li>
             );

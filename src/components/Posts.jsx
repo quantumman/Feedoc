@@ -28,7 +28,7 @@ export default {
                   <div class="media-body">
                     <h4 class="media-heading">
                       <a
-                          href={`/channels/${args.params.channelId}/posts/${p.id}`}
+                          href={`/feeds/${args.params.channelId}/posts/${p.id}`}
                           config={m.route}
                       >
                         {p.title}

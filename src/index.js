@@ -6,12 +6,12 @@ import MainPageContainer from './MainPageContainer.jsx';
 
 const routes = {
   '/': App,
-  '/channels': MainPageContainer,
-  '/channels/:id': MainPageContainer,
-  '/channels/:id/posts': MainPageContainer,
-  '/channels/:id/posts/new': App,
-  '/channels/:id/posts/:postId': MainPageContainer,
-  '/channels/:id/posts/:postId/edit': MainPageContainer,
+  '/feeds': MainPageContainer,
+  '/feeds/:id': MainPageContainer,
+  '/feeds/:id/posts': MainPageContainer,
+  '/feeds/:id/posts/new': App,
+  '/feeds/:id/posts/:postId': MainPageContainer,
+  '/feeds/:id/posts/:postId/edit': MainPageContainer,
 };
 
 m.route(document.body, '/', routes);

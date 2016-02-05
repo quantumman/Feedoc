@@ -1,6 +1,6 @@
 import MainPage from './pages/MainPage.jsx';
 
-import Channels from './models/Channels.js';
+import Feeds from './models/Feeds.js';
 import Posts from './models/Posts.js';
 
 function asNumber(x) {
@@ -10,10 +10,10 @@ function asNumber(x) {
 
 const props = {
   init(args) {
-    this.channels = this.channels || Channels.retrieve();
+    this.feeds = this.feeds || Feeds.retrieve();
 
-    if (args.channelId) {
-      this.posts = Posts.retrieve(args.channelId);
+    if (args.feedId) {
+      this.posts = Posts.retrieve(args.feedId);
     }
 
     if (args.postId) {
@@ -27,7 +27,7 @@ const props = {
 export default {
   controller() {
     this.params = this.params || {};
-    this.params.channelId = asNumber(m.route.param('id'));
+    this.params.feedId = asNumber(m.route.param('id'));
     this.params.postId = asNumber(m.route.param('postId'));
 
     props.init(this.params);

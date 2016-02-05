@@ -1,5 +1,5 @@
 {
-  "channels": [
+  "feeds": [
     {
       "id": 1,
       "name": "foo"
