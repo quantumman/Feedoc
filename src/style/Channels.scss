@@ -3,7 +3,6 @@
 .channels {
     @include component;
     @include fixed;
-    left: $menu-size;
     top: $menu-size;
 
     width: $channel-width;
