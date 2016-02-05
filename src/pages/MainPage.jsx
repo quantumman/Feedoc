@@ -5,52 +5,25 @@ import Channels from '../components/Channels.jsx';
 import Post from '../components/Post.jsx';
 import Posts from '../components/Posts.jsx';
 
-import ChannelsModel from '../models/Channels.js';
-import PostsModel from '../models/Posts.js';
-
-function asNumber(x) {
-  const val = Number(x);
-  return isNaN(val) ? undefined : val;
-}
-
-const vm = {
-  init(args) {
-    this.channels = this.channels || ChannelsModel.retrieve();
-
-    if (args.channelId) {
-      this.posts = PostsModel.retrieve(args.channelId);
-    }
-
-    if (args.postId) {
-      this.post = PostsModel.get(args.postId);
-    }
-  },
-};
-
 export default {
   controller() {
-    this.params = {};
-    this.params.channelId = asNumber(m.route.param('id'));
-    this.params.postId = asNumber(m.route.param('postId'));
-
-    vm.init(this.params);
   },
 
-  view(ctrl) {
+  view(ctrl, props) {
     return (
       <App>
         <div class="main-page-container">
           <div class="channels-item">
-            <Channels {...ctrl.params} channels={vm.channels()} />
+            <Channels {...props} />
           </div>
           <div class="posts-item">
-            <Posts {...ctrl.params} posts={vm.posts()} />
+            <Posts {...props} />
           </div>
           {
             (() => {
-              if (ctrl.params.postId) {
+              if (props.post) {
                 return <div class="post-item">
-                  <Post {...ctrl.params} post={vm.post()} />
+                  <Post {...props} />
                 </div>;
               }
             })()

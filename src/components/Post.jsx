@@ -31,7 +31,7 @@ export default {
   view(_ctrl, args) {
     return (
       <div class="post">
-        <div config={vm.config(args.post)}>
+        <div config={vm.config(args.post())}>
         </div>
       </div>
     );

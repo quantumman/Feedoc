@@ -17,7 +17,7 @@ export default {
       <div class="posts">
         <ul class="list media-list">
           {
-            args.posts.map(p => {
+            args.posts().map(p => {
               return (
                 <li key={p.id} class="item media">
                   <div class="media-left">
@@ -28,7 +28,7 @@ export default {
                   <div class="media-body">
                     <h4 class="media-heading">
                       <a
-                          href={`/channels/${args.channelId}/posts/${p.id}`}
+                          href={`/channels/${args.params.channelId}/posts/${p.id}`}
                           config={m.route}
                       >
                         {p.title}

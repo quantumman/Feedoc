@@ -18,10 +18,10 @@ export default {
         </h4>
         <ul class="list">
         {
-          args.channels.map(c => {
+          args.channels().map(c => {
             return (
               <li class="item" key={c.id}>
-                <a className={c.id === args.channelId && 'active'}
+                <a className={c.id === args.params.channelId && 'active'}
                    href={`/channels/${c.id}`}
                    config={m.route}>
                   # {c.name}
