@@ -2,16 +2,16 @@ import './style/index.scss';
 import './index.html?output=index.html';
 
 import App from './layouts/App.jsx';
-import MainPage from './pages/MainPage.jsx';
+import MainPageContainer from './MainPageContainer.jsx';
 
 const routes = {
   '/': App,
-  '/channels': MainPage,
-  '/channels/:id': MainPage,
-  '/channels/:id/posts': MainPage,
+  '/channels': MainPageContainer,
+  '/channels/:id': MainPageContainer,
+  '/channels/:id/posts': MainPageContainer,
   '/channels/:id/posts/new': App,
-  '/channels/:id/posts/:postId': MainPage,
-  '/channels/:id/posts/:postId/edit': MainPage,
+  '/channels/:id/posts/:postId': MainPageContainer,
+  '/channels/:id/posts/:postId/edit': MainPageContainer,
 };
 
 m.route(document.body, '/', routes);
