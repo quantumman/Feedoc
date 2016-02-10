@@ -9,5 +9,8 @@
 }
 
 .content {
-    margin: $menu-size 0 0 $menu-size;
+    position: relative;
+    top: $menu-size;
+    padding: 0;
+    margin: 0;
 }

@@ -11,22 +11,15 @@ export default {
   view(ctrl, props) {
     return (
       <App>
-        <div class="main-page-container">
-          <div class="feeds-item">
-            <Feeds {...props} />
+        <div class="wrap">
+          <div class="main-page-container">
+            <div class="feeds-item">
+              <Feeds {...props} />
+            </div>
+            <div class="posts-item">
+              <Posts {...props} />
+            </div>
           </div>
-          <div class="posts-item">
-            <Posts {...props} />
-          </div>
-          {
-            (() => {
-              if (props.post) {
-                return <div class="post-item">
-                  <Post {...props} />
-                </div>;
-              }
-            })()
-          }
         </div>
       </App>
     );

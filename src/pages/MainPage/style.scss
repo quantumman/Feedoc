@@ -1,31 +1,46 @@
 @import '../../style/common';
 
-@mixin flex($x) {
-    -webkit-flex: $x 0 0;
-    flex: $x 0 0;
-}
-
-.main-page-container {
+@mixin flexbox {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+}
 
-    height:  100%;
+@mixin flex($x) {
+    -webkit-flex: $x 0 0;
+    flex: $x 0 0;
+}
 
-    .channels-item {
-        @include flex($channel-width);
-        margin: 0;
-        width: $channel-width;
-    }
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
 
-    .posts-item {
-        @include flex(250px);
-    }
+.wrap {
+    height: 90vh;
+    @include flexbox;
 
-    .post-item {
-        @include flex(2);
-        width: auto;
+    .main-page-container {
+        flex: 1;
+        flex-direction: row;
+        @include flexbox;
+
+        .feeds-item {
+            position: relative;
+            top: 0;
+            flex: 1;
+        }
+
+        .posts-item {
+            position: relative;
+            flex: 2 1 auto;
+            overflow: auto;
+        }
+
+        .post-item {
+        }
     }
 }

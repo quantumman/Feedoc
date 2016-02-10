@@ -3,7 +3,8 @@
 .feeds {
     @include component;
     @include fixed;
-    top: $menu-size;
+
+    position: relative;
 
     width: $channel-width;
 
