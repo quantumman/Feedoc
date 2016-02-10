@@ -61,7 +61,7 @@ module.exports = {
       // SASS/CSS compiler
       {
         test: /\.scss$/,
-        loader: 'css!sass',
+        loader: 'style!css!sass',
       },
       // Static files
       {
