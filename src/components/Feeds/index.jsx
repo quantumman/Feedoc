@@ -1,4 +1,4 @@
-import '../style/Feeds.scss';
+import './style.scss';
 
 const vm = {
   init() {

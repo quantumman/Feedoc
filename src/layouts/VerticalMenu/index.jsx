@@ -1,4 +1,4 @@
-import '../style/VerticalMenu.scss';
+import './style.scss';
 
 export default {
   controller() {

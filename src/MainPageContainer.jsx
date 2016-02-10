@@ -1,4 +1,4 @@
-import MainPage from './pages/MainPage.jsx';
+import MainPage from './pages/MainPage';
 
 import Feeds from './models/Feeds.js';
 import Posts from './models/Posts.js';

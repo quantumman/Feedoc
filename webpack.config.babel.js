@@ -18,6 +18,7 @@ module.exports = {
   resolve: {
     root: [path.join(__dirname, 'bower_components')],
     modulesDirectories: ['node_modules', 'bower_components', bootstrapPath],
+    extensions: ['', '.js', '.jsx'],
   },
   plugins: [
     new webpack.ResolverPlugin(
@@ -57,19 +58,19 @@ module.exports = {
         loader: 'babel',
         exclude: /(node_modules|bower_components)/,
       },
-      // SASS compiler
+      // SASS/CSS compiler
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('css!sass'),
-      },
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('css'),
+        loader: 'css!sass',
       },
       // Static files
       {
         test: /\.html$/,
         loader: 'static',
+      },
+      {
+        test: /bootstrap\.css$/,
+        loader: ExtractTextPlugin.extract('css'),
       },
       // Image files
       {

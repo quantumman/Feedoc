@@ -1,7 +1,7 @@
 import './style/index.scss';
 import './index.html?output=index.html';
 
-import App from './layouts/App.jsx';
+import App from './layouts/App';
 import MainPageContainer from './MainPageContainer.jsx';
 
 const routes = {

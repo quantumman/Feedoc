@@ -2,7 +2,7 @@ import 'css/bootstrap.css';
 import 'jquery';
 import 'js/bootstrap.js';
 
-import '../style/app.scss';
+import './style.scss';
 
 export default {
   controller() {

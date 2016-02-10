@@ -1,9 +1,8 @@
-import '../style/MainPage.scss';
+import './style.scss';
 
-import App from '../layouts/App.jsx';
-import Feeds from '../components/Feeds.jsx';
-import Post from '../components/Post.jsx';
-import Posts from '../components/Posts.jsx';
+import App from '../../layouts/App';
+import Feeds from '../../components/Feeds';
+import Posts from '../../components/Posts';
 
 export default {
   controller() {

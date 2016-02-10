@@ -1,4 +1,4 @@
-import '../style/Posts.scss';
+import './style.scss';
 
 import moment from 'moment';
 

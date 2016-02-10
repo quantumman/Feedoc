@@ -1,4 +1,4 @@
-@import 'common';
+@import '../../style/common';
 
 @mixin flex($x) {
     -webkit-flex: $x 0 0;
