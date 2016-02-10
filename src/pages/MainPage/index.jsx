@@ -12,7 +12,7 @@ export default {
     return (
       <App>
         <div class="main-page-container">
-          <div class="channels-item">
+          <div class="feeds-item">
             <Feeds {...props} />
           </div>
           <div class="posts-item">
