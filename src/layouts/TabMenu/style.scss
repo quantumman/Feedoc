@@ -1,4 +1,50 @@
 @import '../../style/common';
 
 .tab-menu {
+    position: relative;
+    overflow: hidden;
+
+    .nav-menu {
+        position: relative;
+        overflow: hidden;
+        background-color: $menu-background-color;
+        .header {
+            float: left;
+        }
+
+        ul {
+            float: right;
+            position: relative;
+            top: 1.6em;
+            left: -15em;
+            display: inline-block;
+            margin-left: 5em;
+        }
+    }
+
+    .tab-content {
+        margin: 0;
+        padding: 0;
+
+        .tab-pane {
+            position: relative;
+            height: 80vh;
+            overflow: auto;
+        }
+    }
+}
+
+
+/* override twitter bootstrap's pills style */
+.nav-pills li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+    background-color: #FFF;
+    color: #006be5;
+    border: solid 1px #DDD;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+}
+.nav-pills li > a {
+    color: #111;
 }
