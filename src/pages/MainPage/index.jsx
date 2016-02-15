@@ -1,6 +1,7 @@
 import './style.scss';
 
 import App from '../../layouts/App';
+import { Tabs, Tab } from '../../layouts/TabMenu';
 import Feeds from '../../components/Feeds';
 import Posts from '../../components/Posts';
 
@@ -17,7 +18,15 @@ export default {
               <Feeds {...props} />
             </div>
             <div class="posts-item">
-              <Posts {...props} />
+              <Tabs feedName={props.feeds().find((f) => f.id === props.params.feedId).name}>
+                <Tab title="POST" isActive={false}>
+                </Tab>
+                <Tab title="TIMELINE" isActive={true}>
+                  <Posts {...props} />
+                </Tab>
+                <Tab title="WIP" isActive={false}>
+                </Tab>
+              </Tabs>
             </div>
           </div>
         </div>
