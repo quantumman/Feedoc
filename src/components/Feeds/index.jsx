@@ -16,13 +16,14 @@ export default {
         <h4 class="header">
           FEEDS <span>({args.feeds().length})</span>
         </h4>
-        <ul class="list">
+        <ul class="list  nav nav-pills nav-stacked">
         {
           args.feeds().map(f => {
             return (
-              <li class="item" key={f.id}>
-                <a className={f.id === args.params.feedId && 'active'}
-                   href={`/feeds/${f.id}`}
+              <li class={f.id === args.params.feedId ? 'item active' : 'item'}
+                  key={f.id}
+              >
+                <a href={`/feeds/${f.id}`}
                    config={m.route}>
                   # {f.name}
                 </a>

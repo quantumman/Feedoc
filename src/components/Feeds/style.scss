@@ -7,9 +7,10 @@
     position: relative;
 
     width: $channel-width;
+    margin: 0;
 
     .header {
-        padding: 0 0 0.5em 0.5em;
+        padding: 0 0 0.5em 1em;
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -17,7 +18,7 @@
     .list {
         @include list-style-none;
 
-        padding-left: 1.5em;
+        padding-left: 0.5em;
         font-size: 1.1em;
 
         $item-width: $channel-width - 20px;
@@ -26,17 +27,15 @@
                 color: inherit;
                 display: block;
                 text-decoration: none;
-                width: $item-width;
+                padding: 0 0 0 2em;
+                margin: 0 0 0 -1em;
+                width: 100%;
+                &:hover {
+                    background: #EEE;
+                    color: #000;
+                    cursor: pointer;
+                }
             }
-        }
-        .item:hover {
-            background: #EEE;
-            color: #000;
-            cursor: pointer;
-            width: $item-width;
-        }
-        .active {
-            background: #AAA;
         }
     }
 }
