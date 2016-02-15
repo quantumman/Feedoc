@@ -20,7 +20,9 @@ export default {
             args.posts().map(p => {
               return (
                 <li key={p.id} class="item">
-                  <div class="timeline-icon"></div>
+                  <div class="timeline-icon">
+                    <span class="icon glyphicon glyphicon-book"></span>
+                  </div>
                   <div class="timeline-content">
                     <div>
                       <a href="#">

@@ -9,18 +9,24 @@
     .list {
         list-style: none;
 
+        $timeline-icon-size: 40px;
         .timeline-icon {
-            width: 30px;
-            height: 30px;
+            width: $timeline-icon-size;
+            height: $timeline-icon-size;
             speak: none;
             -webkit-font-smoothing: antialiased;
             color: #fff;
-            background: #46a4da;
             border-radius: 50%;
-            box-shadow: 0 0 0 8px #afdcf8;
-            margin: 10px 0 0 0;
+            border: solid 1px #AAA;
+            margin: 0 0 0 0;
             padding: 0;
             position: absolute;
+            .icon {
+                color: #AAA;
+                font-size: 1.3em;
+                vertical-align: middle;
+                margin: 0.45em 0 0 0.45em;
+            }
         }
 
         .timeline-content {
@@ -39,9 +45,9 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 52px;
-        width: 5px;
-        background: #d7e4ed;
+        left: 4.1em;
+        width: 3px;
+        background: #EEE;
         z-index: -1;
     }
 }
