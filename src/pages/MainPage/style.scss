@@ -31,7 +31,8 @@ html, body {
         .feeds-item {
             position: relative;
             top: 0;
-            flex: 1;
+            flex: 0 0 17em;
+            padding: 1em 0 0 1em;
         }
 
         .posts-item {
