@@ -14,7 +14,7 @@ export default {
     return (
       <div class="feeds">
         <h4 class="header">
-          CHANNELS <span>({args.feeds().length})</span>
+          FEEDS <span>({args.feeds().length})</span>
         </h4>
         <ul class="list">
         {
