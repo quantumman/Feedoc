@@ -47,13 +47,21 @@ export default {
                           CONTRIBUTORS
                         </small>
                         {
-                          p.contributors.map(i => {
+                          p.contributors.slice(0, 6).map(i => {
                             return (
                               <span>
-                                <img src={i.avatar} alt="contributors" class="avatar" />
+                                <img src={i.avatar} alt="contributors" class="img-circle avatar" />
                               </span>
                             );
                           })
+                        }
+                        {
+                          p.contributors.length >= 6
+                          ? (
+                            <span class="vertical-middle glyphicon glyphicon-option-horizontal">
+                            </span>
+                          )
+                          : ''
                         }
                       </div>
                       <small>post date: {
