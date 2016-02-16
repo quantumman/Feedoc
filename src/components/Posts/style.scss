@@ -48,7 +48,14 @@
                 }
             }
             .body {
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                margin-top: 0.5em;
+                padding: 0 0 0 1em;
+                width: 30em;
+
                 .contributors {
+                    margin-top: 0.5em;
                     small {
                         display: block;
                     }
@@ -59,6 +66,22 @@
                     .glyphicon {
                         color: #555;
                         margin: 0 1em;
+                        vertical-align: middle;
+                    }
+                    .avatar,
+                    .glyphicon {
+                        margin-top: 0.5em;
+                    }
+                }
+
+                .footer {
+                    text-align: right;
+                    width: 100%;
+                    .btn {
+                        border-radius: 0;
+                        border-bottom: none;
+                        border-right: none;
+                        background-color: rgba(255,255,255, 0);
                     }
                 }
             }

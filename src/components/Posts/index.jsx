@@ -64,13 +64,12 @@ export default {
                           : ''
                         }
                       </div>
-                      <small>post date: {
-                        moment(
-                          p.createdOn,
-                          'dd MM D HH:mm:ss UTCZ YYYY'
-                        ).format('L')
-                                        }
-                      </small>
+                      <div class="footer">
+                        <div class="btn-group" role="group" arial-label="footer">
+                          <button type="button" class="btn btn-default btn-sm">EDIT</button>
+                          <button type="button" class="btn btn-default btn-sm">COMMENTS ({p.comments})</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </li>
