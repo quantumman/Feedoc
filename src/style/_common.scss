@@ -21,3 +21,9 @@ $channel-width: 180px;
     padding-top: 0.5em;
     margin-top: 0.5em;
 }
+
+@mixin avatar($size) {
+    height: $size;
+    width: $size;
+    background-color: #EEE;
+}
