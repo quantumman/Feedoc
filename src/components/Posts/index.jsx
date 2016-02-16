@@ -34,14 +34,14 @@ export default {
                       </span>
                     </div>
                     <div class="body">
-                      <h4>
+                      <h3>
                         <a
                             href={`/feeds/${args.params.feedId}/posts/${p.id}`}
                             config={m.route}
                         >
                           {p.title}
                         </a>
-                      </h4>
+                      </h3>
                       <div class="contributors">
                         <small>
                           CONTRIBUTORS
