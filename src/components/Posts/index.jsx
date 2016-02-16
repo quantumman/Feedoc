@@ -24,10 +24,14 @@ export default {
                     <span class="icon glyphicon glyphicon-book"></span>
                   </div>
                   <div class="timeline-content">
-                    <div>
+                    <div class="header">
                       <a href="#">
-                        <img src={p.avatar} alt="avatar" />
+                        <img src={p.avatar} alt="avatar" class="img-circle avatar" />
+                        <span class="username">{p.createdBy}</span>
                       </a>
+                      <span class="content-type">
+                        <small><span class="tiny">POSTED</span> {p.contentType}</small>
+                      </span>
                     </div>
                     <div>
                       <h4>

@@ -36,6 +36,17 @@
             line-height: 1.4;
             position: relative;
             border-radius: 5px;
+            .header {
+                .avatar {
+                    @include avatar(40px);
+                }
+                .username {
+                    margin: 0 0.3em 0 1em;
+                }
+                .content-type .tiny {
+                    font-size: 0.7em;
+                }
+            }
         }
     }
 
