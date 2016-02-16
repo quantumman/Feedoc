@@ -33,7 +33,7 @@ export default {
                         <small><span class="tiny">POSTED</span> {p.contentType}</small>
                       </span>
                     </div>
-                    <div>
+                    <div class="body">
                       <h4>
                         <a
                             href={`/feeds/${args.params.feedId}/posts/${p.id}`}
@@ -42,6 +42,20 @@ export default {
                           {p.title}
                         </a>
                       </h4>
+                      <div class="contributors">
+                        <small>
+                          CONTRIBUTORS
+                        </small>
+                        {
+                          p.contributors.map(i => {
+                            return (
+                              <span>
+                                <img src={i.avatar} alt="contributors" class="avatar" />
+                              </span>
+                            );
+                          })
+                        }
+                      </div>
                       <small>post date: {
                         moment(
                           p.createdOn,

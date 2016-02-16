@@ -47,6 +47,17 @@
                     font-size: 0.7em;
                 }
             }
+            .body {
+                .contributors {
+                    small {
+                        display: block;
+                    }
+                    .avatar {
+                        @include avatar(25px);
+                        margin: 0 1px 0 1px;
+                    }
+                }
+            }
         }
     }
 
