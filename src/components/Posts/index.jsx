@@ -65,7 +65,9 @@ export default {
                       <div class="footer">
                         <div class="btn-group" role="group" arial-label="footer">
                           <button type="button" class="btn btn-default btn-sm">EDIT</button>
-                          <button type="button" class="btn btn-default btn-sm">COMMENTS ({p.comments})</button>
+                          <button type="button" class="btn btn-default btn-sm">
+                            COMMENTS ({p.comments})
+                          </button>
                         </div>
                       </div>
                     </div>
