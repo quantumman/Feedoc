@@ -25,6 +25,7 @@ const vm = {
        .map((c, index) => {
          return {
            id: index,
+           ink: false,
            label: c.title(),
          };
        });
@@ -44,14 +45,14 @@ export const Tabs = {
     return (
       <div class="tab-menu">
         <div class="nav-menu">
-          <h2 class="header">{args.feedName}</h2>
+          <h3 class="header">{args.feedName}</h3>
           <PTabs buttons={vm.buttons}
-                autofit={true}
-                selectedTab={vm.selectedTab()}
-                activeSelected={true}
-                getState={state => {
-                  vm.selectedTab(state.index);
-                }}
+                 autofit={true}
+                 selectedTab={vm.selectedTab()}
+                 activeSelected={true}
+                 getState={state => {
+                   vm.selectedTab(state.index);
+                 }}
           />
         </div>
         <div class="tab-content">

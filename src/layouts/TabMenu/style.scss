@@ -6,33 +6,20 @@
 
     .nav-menu {
         border-bottom: solid 1px #EEE;
-        position: relative;
         overflow: hidden;
-        height: 4.5em;
-        margin-left: 1em;
-        padding-top: 1.4em;
+        min-height: 5.5em;
+        width: 100%;
         .header {
-            float: left;
-            margin: 0;
-            width: 8em;
-        }
-
-        ul {
-            float: left;
-            position: relative;
-            display: inline-block;
-            margin: 0;
+            margin: 0.8em 0 0 0.5em;
         }
     }
 
     .tab-content {
+        height: 80vh;
         margin: 0;
+        overflow: auto;
         padding: 0;
-
-        .tab-pane {
-            position: relative;
-            height: 80vh;
-            overflow: auto;
-        }
+        position: relative;
     }
 }
+
