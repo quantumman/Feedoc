@@ -2,11 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const bootstrapPath = path.join(
-  __dirname,
-  'bower_components/bootstrap/dist/'
-);
-
 module.exports = {
   entry: [
     './src/index.js',
@@ -17,7 +12,7 @@ module.exports = {
   },
   resolve: {
     root: [path.join(__dirname, 'bower_components')],
-    modulesDirectories: ['node_modules', 'bower_components', bootstrapPath],
+    modulesDirectories: ['node_modules', 'bower_components'],
     extensions: ['', '.js', '.jsx'],
   },
   plugins: [
@@ -67,10 +62,6 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'static',
-      },
-      {
-        test: /bootstrap\.css$/,
-        loader: ExtractTextPlugin.extract('css'),
       },
       // Image files
       {
