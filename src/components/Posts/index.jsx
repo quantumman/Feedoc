@@ -1,7 +1,5 @@
 import './style.scss';
 
-import moment from 'moment';
-
 const vm = {
   init() {
   },
