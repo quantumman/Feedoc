@@ -1,25 +1,7 @@
 @import '../../style/common';
 
 .tab-menu {
-    position: relative;
-    overflow: hidden;
-
-    .nav-menu {
-        border-bottom: solid 1px #EEE;
-        overflow: hidden;
-        min-height: 5.5em;
-        width: 100%;
-        .header {
-            margin: 0.8em 0 0 0.5em;
-        }
-    }
-
-    .tab-content {
-        height: 80vh;
-        margin: 0;
-        overflow: auto;
-        padding: 0;
-        position: relative;
+    .pe-toolbar {
+        background-color: #fff;
     }
 }
-

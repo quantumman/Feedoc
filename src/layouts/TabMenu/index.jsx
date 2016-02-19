@@ -1,5 +1,6 @@
 import './style.scss';
 import PTabs from 'polythene/tabs/tabs';
+import FixedHeaderPanel from '../FixedHeaderPanel';
 
 export const Tab = {
   controller(args) {
@@ -42,22 +43,24 @@ export const Tabs = {
   },
 
   view(_ctrl, args) {
+    const tabs = (
+      <PTabs buttons={vm.buttons}
+             autofit={true}
+             selectedTab={vm.selectedTab()}
+             activeSelected={true}
+             getState={state => {
+               vm.selectedTab(state.index);
+             }}
+      />
+    );
+
     return (
       <div class="tab-menu">
-        <div class="nav-menu">
-          <h3 class="header">{args.feedName}</h3>
-          <PTabs buttons={vm.buttons}
-                 autofit={true}
-                 selectedTab={vm.selectedTab()}
-                 activeSelected={true}
-                 getState={state => {
-                   vm.selectedTab(state.index);
-                 }}
-          />
-        </div>
-        <div class="tab-content">
-          {vm.children[vm.selectedTab()]}
-        </div>
+        <FixedHeaderPanel title={args.feedName} nav={tabs}>
+          <div class="tab-content">
+            {vm.children[vm.selectedTab()]}
+          </div>
+        </FixedHeaderPanel>
       </div>
     );
   },
