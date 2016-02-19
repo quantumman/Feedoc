@@ -1,4 +1,5 @@
 import 'polythene/theme/theme';
+import 'polythene/layout/theme/theme';
 
 import './style.scss';
 
