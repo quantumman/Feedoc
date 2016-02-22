@@ -8,18 +8,18 @@
 
     width: $channel-width;
     margin: 0;
+    padding-left: 16px;
 
     .header {
-        padding: 0 0 0.5em 1em;
-        margin-top: 0;
-        margin-bottom: 0;
+        padding-bottom: 0;
+        margin-bottom: 0.2em
     }
 
     .list {
         @include list-style-none;
 
-        padding-left: 0.5em;
         font-size: 1.1em;
+        padding-left: 16px;
 
         $item-width: $channel-width - 20px;
         .item {
@@ -27,8 +27,6 @@
                 color: inherit;
                 display: block;
                 text-decoration: none;
-                padding: 0 0 0 2em;
-                margin: 0 0 0 -1em;
                 width: 100%;
                 &:hover {
                     background: #EEE;
