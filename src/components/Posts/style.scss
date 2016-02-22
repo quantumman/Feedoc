@@ -10,22 +10,22 @@
         list-style: none;
 
         $timeline-icon-size: 40px;
+        $timeline-icon-color: #aaa;
         .timeline-icon {
             width: $timeline-icon-size;
             height: $timeline-icon-size;
             speak: none;
             -webkit-font-smoothing: antialiased;
-            color: #fff;
             border-radius: 50%;
-            border: solid 1px #AAA;
-            margin: 0 0 0 0;
+            border: solid 1px $timeline-icon-color;
+            color: $timeline-icon-color;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0;
             padding: 0;
             position: absolute;
-            .icon {
-                color: #AAA;
-                font-size: 1.3em;
-                vertical-align: middle;
-                margin: 0.45em 0 0 0.45em;
+            .pe-icon {
+                margin-top: 19%;
             }
         }
 

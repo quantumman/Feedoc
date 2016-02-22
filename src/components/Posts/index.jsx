@@ -1,4 +1,6 @@
 import './style.scss';
+import Icon from 'polythene/icon/icon';
+import book from 'mmsvg/google/msvg/action/book';
 
 const vm = {
   init() {
@@ -19,7 +21,7 @@ export default {
               return (
                 <li key={p.id} class="item">
                   <div class="timeline-icon">
-                    <span class="icon glyphicon glyphicon-book"></span>
+                    <Icon msvg={book} />
                   </div>
                   <div class="timeline-content">
                     <div class="header">
