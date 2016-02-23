@@ -32,7 +32,12 @@ const vm = {
        });
 
     this.selectedTab = m.prop(
-      this.children.find(c => c.isActive()).id
+      this.children
+          .map((c, index) => {
+            return { child: c, index };
+          })
+          .find(x => x.child.isActive())
+          .index
     );
   },
 };
