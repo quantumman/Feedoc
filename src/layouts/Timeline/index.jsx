@@ -26,9 +26,28 @@ export const Content = {
 };
 
 export const Timeline = {
-  view() {
+  view(_ctrl, _props, children) {
+    const contents = children
+      .reduce((a, b) => a.concat(b), [])
+      .map(c => c.controller());
     return (
       <div class="timeline">
+        <ul>
+        {
+          contents.map((c, index) => {
+            return (
+              <li key={index}>
+                <div class="icon">
+                  <Icon msvg={c.icon} />
+                </div>
+                <div class="content">
+                  {c}
+                </div>
+              </li>
+            );
+          })
+        }
+        </ul>
       </div>
     );
   },
