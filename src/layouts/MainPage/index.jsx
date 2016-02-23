@@ -12,6 +12,18 @@ export const LeftPanel = {
   },
 };
 
+export const Content = {
+  controller() {
+    return {
+      name: 'MainPage.Content',
+    };
+  },
+
+  view(_ctrl, _props, children) {
+    return <div>{children}</div>;
+  },
+};
+
 export default {
   view(_ctrl, _props) {
     return (
