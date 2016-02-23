@@ -28,10 +28,10 @@ export default {
     vm.init();
   },
 
-  view(_ctrl, args) {
+  view(_ctrl, props) {
     return (
       <div class="post">
-        <div config={vm.config(args.post())}>
+        <div config={vm.config(props.post())}>
         </div>
       </div>
     );
