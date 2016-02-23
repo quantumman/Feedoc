@@ -1,14 +1,27 @@
 .timeline {
 
     .timeline-content {
+        font-size: 1.2em;
+        height: 100%;
+        margin: 0 0 5em 60px;
+        position: relative;
+
+        .timeline-box {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
 
         .timeline-header {
+            margin-bottom: 0.1em;
         }
 
         .timeline-body {
+            margin-top: 0.5em;
+            padding: 0 0 0 1em;
         }
 
         .timeline-footer {
+            text-align: right;
         }
 
     }
