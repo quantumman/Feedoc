@@ -1,5 +1,17 @@
 .timeline {
 
+    /* vertical timeline */
+    &:after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 4.11em;
+        width: 3px;
+        background: #EEE;
+        z-index: -1;
+    }
+
     ul {
         list-style: none;
         max-width: 1170px;
