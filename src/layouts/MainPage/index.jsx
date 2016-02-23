@@ -24,7 +24,7 @@ export const Content = {
   },
 };
 
-export default {
+export const MainPage = {
   view(_ctrl, _props) {
     return (
       <div class="main-page">
