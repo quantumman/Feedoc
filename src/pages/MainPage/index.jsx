@@ -19,8 +19,8 @@ export default {
               <Feeds {...props} />
             </div>
             {
-              props.post
-              ? <Post {...props}></Post>
+              props.params.postId
+              ? <div class="post-item"><Post {...props}></Post></div>
               : (
                   <div class="posts-item">
                     <Tabs feedName={props.feeds().find((f) => f.id === props.params.feedId).name}>

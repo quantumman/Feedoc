@@ -36,13 +36,11 @@ html, body {
             padding: 1em 0 0 0;
         }
 
-        .posts-item {
+        .posts-item,
+        .post-item {
             position: relative;
             flex: 2 1 auto;
             overflow: auto;
-        }
-
-        .post-item {
         }
     }
 }
