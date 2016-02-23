@@ -1,4 +1,16 @@
 import './style.scss';
+import Button from 'polythene/button/button';
+import Icon from 'polythene/icon/icon';
+import book from 'mmsvg/google/msvg/action/book';
+
+const Avatar = {
+  view(_ctrl, props) {
+    return m(Icon, {
+      src: props.src,
+      class: 'pe-icon--avatar',
+    });
+  },
+};
 
 const vm = {
   init() {
@@ -19,16 +31,17 @@ export default {
               return (
                 <li key={p.id} class="item">
                   <div class="timeline-icon">
-                    <span class="icon glyphicon glyphicon-book"></span>
+                    <Icon msvg={book} />
                   </div>
                   <div class="timeline-content">
                     <div class="header">
                       <a href="#">
-                        <img src={p.avatar} alt="avatar" class="img-circle avatar" />
-                        <span class="username">{p.createdBy}</span>
+                        <Avatar src={p.creator.avatar} />
+                        <span class="username header-text">{p.createdBy}</span>
                       </a>
-                      <span class="content-type">
-                        <small><span class="tiny">POSTED</span> {p.contentType}</small>
+                      <span class="content-type header-text">
+                        <span class="tiny">POSTED </span>
+                        <small>{p.contentType}</small>
                       </span>
                     </div>
                     <div class="body">
@@ -48,7 +61,7 @@ export default {
                           p.contributors.slice(0, 6).map(i => {
                             return (
                               <span>
-                                <img src={i.avatar} alt="contributors" class="img-circle avatar" />
+                                <Avatar src={i.avatar} />
                               </span>
                             );
                           })
@@ -63,12 +76,8 @@ export default {
                         }
                       </div>
                       <div class="footer">
-                        <div class="btn-group" role="group" arial-label="footer">
-                          <button type="button" class="btn btn-default btn-sm">EDIT</button>
-                          <button type="button" class="btn btn-default btn-sm">
-                            COMMENTS ({p.comments})
-                          </button>
-                        </div>
+                        <Button label="EDIT" ink={false} />
+                        <Button label={`COMMENTS(${p.comments})`} ink={false} />
                       </div>
                     </div>
                   </div>

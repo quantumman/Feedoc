@@ -25,70 +25,70 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -101,22 +101,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -129,22 +129,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -157,22 +157,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -185,22 +185,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -213,22 +213,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -241,22 +241,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -269,22 +269,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -297,22 +297,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -325,22 +325,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -353,22 +353,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -381,22 +381,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -409,22 +409,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -437,22 +437,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -465,22 +465,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -493,22 +493,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -521,22 +521,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -549,22 +549,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",
@@ -577,22 +577,22 @@
       "createdBy": "user",
       "creator": {
         "name": "user",
-        "avatar": "https://hoge.com/images"
+        "avatar": "/assets/foo.png"
       },
       "contentType": "document",
       "comments": "5",
       "contributors": [
         {
           "name": "user",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userA",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         },
         {
           "name": "userB",
-          "avatar": "https://hoge.com/images"
+          "avatar": "/assets/foo.png"
         }
       ],
       "createdOn": "Thu May 1 02:00:00 UTC+0900 2008",

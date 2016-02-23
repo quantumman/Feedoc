@@ -25,9 +25,12 @@ $channel-width: 180px;
 @mixin avatar($size) {
     height: $size;
     width: $size;
-    background-color: #EEE;
 }
 
 .vertical-middle {
     vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
 }

@@ -8,36 +8,36 @@
 
     .list {
         list-style: none;
+        width: 90%;
+        max-width: 1170px;
 
         $timeline-icon-size: 40px;
+        $timeline-icon-color: #aaa;
         .timeline-icon {
             width: $timeline-icon-size;
             height: $timeline-icon-size;
             speak: none;
             -webkit-font-smoothing: antialiased;
-            color: #fff;
             border-radius: 50%;
-            border: solid 1px #AAA;
-            margin: 0 0 0 0;
-            padding: 0;
+            border: solid 1px $timeline-icon-color;
+            color: $timeline-icon-color;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0;
             position: absolute;
-            .icon {
-                color: #AAA;
-                font-size: 1.3em;
-                vertical-align: middle;
-                margin: 0.45em 0 0 0.45em;
+            .pe-icon {
+                margin-top: 19%;
             }
         }
 
         .timeline-content {
-            margin: 0 0 5em 10%;
-            font-size: 1.2em;
-            font-weight: 300;
-            line-height: 1.4;
             position: relative;
+            margin: 0 0 5em 60px;
+            font-size: 1.2em;
             border-radius: 5px;
+	    height: 100%;
             .header {
-                .avatar {
+                .pe-icon {
                     @include avatar(40px);
                 }
                 .username {
@@ -52,48 +52,36 @@
                 border-radius: 4px;
                 margin-top: 0.5em;
                 padding: 0 0 0 1em;
-                width: 30em;
+
+                h3 {
+                    margin-bottom: 0.5em;
+                }
 
                 .contributors {
                     margin-top: 0.5em;
                     small {
                         display: block;
                     }
-                    .avatar {
+                    .pe-icon {
                         @include avatar(25px);
-                        margin: 0 1px 0 1px;
-                    }
-                    .glyphicon {
-                        color: #555;
-                        margin: 0 1em;
-                        vertical-align: middle;
-                    }
-                    .avatar,
-                    .glyphicon {
-                        margin-top: 0.5em;
                     }
                 }
 
                 .footer {
                     text-align: right;
                     width: 100%;
-                    .btn {
-                        border-radius: 0;
-                        border-bottom: none;
-                        border-right: none;
-                        background-color: rgba(255,255,255, 0);
-                    }
                 }
             }
         }
     }
 
+    /* vertical timeline */
     &:after {
         content: ' ';
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 4.1em;
+        left: 4.11em;
         width: 3px;
         background: #EEE;
         z-index: -1;
