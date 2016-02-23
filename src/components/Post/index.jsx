@@ -1,3 +1,5 @@
+import './style.scss';
+
 import Toolbar from 'polythene/toolbar/toolbar';
 import IconArrowBack from 'mmsvg/google/msvg/navigation/arrow-back';
 import IconButton from 'polythene/icon-button/icon-button';
