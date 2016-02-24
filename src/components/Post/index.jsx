@@ -42,7 +42,13 @@ export default {
       <span class="flex">
         <h3 class="fixed-header-panel__title">{props.post().title}</h3>
       </span>,
-      <IconButton icon={{ msvg: ModeEdit }} />,
+      <IconButton
+          icon={{ msvg: ModeEdit }}
+          url={{
+            href: `/feeds/${props.params.feedId}/posts/${props.params.postId}/edit`,
+            config: m.route,
+          }}
+      />,
     ];
     return (
       <div class="post">
