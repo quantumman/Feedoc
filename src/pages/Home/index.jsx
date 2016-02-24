@@ -6,6 +6,23 @@ import Feeds from '../../components/Feeds';
 import Post from '../../components/Post';
 import Posts from '../../components/Posts';
 
+const MainBlock = {
+  view(_ctrl, props, children) {
+    return (
+      <MainPage>
+        <LeftPanel>
+          <div class="feeds-item">
+            <Feeds {...props} />
+          </div>
+        </LeftPanel>
+        <Content>
+          {children}
+        </Content>
+      </MainPage>
+    );
+  },
+};
+
 export default {
   controller() {
   },
