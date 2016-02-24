@@ -62,39 +62,3 @@ export const PostViewPage = {
     );
   },
 };
-
-export default {
-  controller() {
-  },
-
-  view(ctrl, props) {
-    return (
-      <MainPage>
-        <LeftPanel>
-          <div class="feeds-item">
-            <Feeds {...props} />
-          </div>
-        </LeftPanel>
-        <Content>
-          {
-            props.params.postId
-            ? <div class="post-item"><Post {...props}></Post></div>
-            : (
-              <div class="posts-item">
-                <Tabs feedName={props.feeds().find((f) => f.id === props.params.feedId).name}>
-                  <Tab title="POST" isActive={false}>
-                  </Tab>
-                  <Tab title="TIMELINE" isActive={true}>
-                    <Posts {...props} />
-                  </Tab>
-                  <Tab title="WIP" isActive={false}>
-                  </Tab>
-                </Tabs>
-              </div>
-            )
-          }
-        </Content>
-      </MainPage>
-    );
-  },
-};
