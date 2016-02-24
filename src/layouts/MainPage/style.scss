@@ -1,4 +1,46 @@
 @import '../../style/common';
 
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flex($x) {
+    -webkit-flex: $x 0 0;
+    flex: $x 0 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
 .main-page {
+    .wrap {
+        height: 90vh;
+        @include flexbox;
+        .container {
+            flex: 1;
+            flex-direction: row;
+            @include flexbox;
+
+            .left-panel {
+                background-color: $menu-background-color;
+                flex: 0 0 14em;
+                padding: 1em 0 0 0;
+                position: relative;
+                top: 0;
+            }
+            .content {
+                flex: 2 1 auto;
+                overflow: auto;
+                position: relative;
+                top: 0;
+            }
+        }
+    }
 }
