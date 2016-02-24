@@ -43,6 +43,18 @@ export const PostsPage = {
   },
 };
 
+export const PostViewPage = {
+  view(_ctrl, props) {
+    return (
+      <MainBlock {...props}>
+        <div class="post-item">
+          <Post {...props} />
+        </div>
+      </MainBlock>
+    );
+  },
+};
+
 export default {
   controller() {
   },
