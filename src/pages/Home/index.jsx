@@ -23,6 +23,26 @@ const MainBlock = {
   },
 };
 
+export const PostsPage = {
+  view(_ctrl, props) {
+    return (
+      <MainBlock {...props}>
+        <div class="posts-item">
+          <Tabs feedName={props.feeds().find((f) => f.id === props.params.feedId).name}>
+            <Tab title="POST" isActive={false}>
+            </Tab>
+            <Tab title="TIMELINE" isActive={true}>
+              <Posts {...props} />
+            </Tab>
+            <Tab title="WIP" isActive={false}>
+            </Tab>
+          </Tabs>
+        </div>
+      </MainBlock>
+    );
+  },
+};
+
 export default {
   controller() {
   },
