@@ -14,6 +14,10 @@ export default {
     return (
       <div class="markdown-editor">
         <Toolbar content={toolbar} />
+        <div class="editor">
+          <div class="edit-area">TEST</div>
+          <div class="preview-area">TEST</div>
+        </div>
       </div>
     );
   },

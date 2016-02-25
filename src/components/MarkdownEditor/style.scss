@@ -1,2 +1,14 @@
+/* layout */
 .markdown-editor {
+    .editor {
+        display: flex;
+        .edit-area {
+            height: 100vh;
+            flex: 1 1;
+        }
+        .preview-area {
+            height: 100vh;
+            flex: 1 1;
+        }
+    }
 }
