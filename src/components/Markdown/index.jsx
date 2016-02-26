@@ -12,18 +12,11 @@ marked.setOptions({
   smarttypants: true,
 });
 
-function config(markdown) {
-  return (element, isInitialized) => {
-    if (!isInitialized && markdown) {
-      $(element).html(marked(markdown));
-    }
-  };
-}
-
 export default {
-  view() {
+  view(_ctrl, props) {
     return (
       <div class="markdown">
+        {m.trust(marked(props.src))}
       </div>
     );
   },
