@@ -1,0 +1,36 @@
+{
+  "feeds": [
+    {{#repeat 4}}
+    {
+      "id": {{@index}},
+      "name": "{{lorem 1}}"
+    }
+    {{/repeat}}
+  ],
+  "posts": [
+    {{#repeat 10}}
+    {
+      "id": {{@index}},
+      "feedId": {{int 0 3}},
+      "title": "{{lorem 1}}",
+      "createdBy": "{{firstName}} {{lastName}}",
+      "creator": {
+        "name": "{{firtName}} {{lastName}}",
+        "avatar": "/assets/foo.png"
+      },
+      "contentType": "document",
+      "comments": {{int 0 100}},
+      "contributors": [
+        {{#repeat 7}}
+        {
+          "name": "{{firtName}} {{lastName}}",
+          "avatar": "/assets/foo.png"
+        }
+        {{/repeat}}
+      ],
+      "createdOn": "{{date '2016' '2020'}}",
+      "content": "I am using __markdown__."
+    }
+    {{/repeat}}
+  ]
+}
