@@ -35,7 +35,8 @@
     "postinstall": "bower install",
     "build": "webpack",
     "deploy": "webpack -p --config webpack.production.config.js",
-    "dev-server": "json-server jsonserver/db.json --routes jsonserver/routes.json & webpack-dev-server --content-base=build/ --inline"
+    "dev-server": "json-server jsonserver/db.json --routes jsonserver/routes.json & webpack-dev-server --content-base=build/ --inline",
+    "update-db.json": "node_modules/dummy-json/cli.js jsonserver/template.json > jsonserver/db.json"
   },
   "babel": {
     "presets": [
