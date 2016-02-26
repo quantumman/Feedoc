@@ -16,7 +16,12 @@ export default {
       <div class="markdown-editor">
         <Toolbar content={toolbar} />
         <div class="editor">
-          <div class="edit-area">TEST</div>
+          <div class="edit-area"
+               contenteditable={true}
+               oninput={m.withAttr('innerText', props.src)}
+          >
+            {props.src()}
+          </div>
           <div class="preview-area">
             <Markdown src={props.src()}/>
           </div>
