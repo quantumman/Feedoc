@@ -8,17 +8,17 @@ export default {
       data: args,
     });
   },
-  create(channelId, args) {
+  create(feedId, args) {
     return m.request({
       method: 'POST',
-      url: `api/channels/${channelId}/posts`,
+      url: `api/feeds/${feedId}/posts`,
       data: args,
     });
   },
-  retrieve(channelId, args) {
+  retrieve(feedId, args) {
     return m.request({
       method: 'GET',
-      url: `api/channels/${channelId}/posts`,
+      url: `api/feeds/${feedId}/posts`,
       data: args,
     });
   },
