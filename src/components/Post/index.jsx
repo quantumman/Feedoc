@@ -6,36 +6,7 @@ import IconButton from 'polythene/icon-button/icon-button';
 import ModeEdit from 'mmsvg/google/msvg/editor/mode-edit';
 import Markdown from '../Markdown';
 
-import marked from 'marked';
-marked.setOptions({
-  rendered: new marked.Renderer(),
-  gfm: true,
-  tables: true,
-  breaks: true,
-  pedantic: true,
-  sanitize: true,
-  smartLists: true,
-  smarttypants: true,
-});
-
-const vm = {
-  init() {
-  },
-
-  config(markup) {
-    return (element, isInitialized) => {
-      if (!isInitialized && markup) {
-        $(element).html(marked(markup.content));
-      }
-    };
-  },
-};
-
 export default {
-  controller() {
-    vm.init();
-  },
-
   view(_ctrl, props) {
     const toolbar = [
       <IconButton icon={{ msvg: IconArrowBack }}
