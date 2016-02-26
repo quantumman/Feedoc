@@ -4,6 +4,7 @@ import Toolbar from 'polythene/toolbar/toolbar';
 import IconArrowBack from 'mmsvg/google/msvg/navigation/arrow-back';
 import IconButton from 'polythene/icon-button/icon-button';
 import ModeEdit from 'mmsvg/google/msvg/editor/mode-edit';
+import Markdown from '../Markdown';
 
 import marked from 'marked';
 marked.setOptions({
@@ -53,8 +54,7 @@ export default {
     return (
       <div class="post">
         <Toolbar content={toolbar} />
-        <div config={vm.config(props.post())}>
-        </div>
+        <Markdown src={props.post().content} />
       </div>
     );
   },
