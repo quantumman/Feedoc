@@ -23,6 +23,14 @@ const MainBlock = {
   },
 };
 
+export const FeedsPage = {
+  view(_ctrl, props) {
+    return (
+      <MainBlock {...props} />
+    );
+  },
+};
+
 export const PostsPage = {
   view(_ctrl, props) {
     return (
