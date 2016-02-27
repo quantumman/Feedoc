@@ -10,11 +10,11 @@ const props = {
   init(args) {
     this.feeds = this.feeds || Feeds.retrieve();
 
-    if (args.feedId) {
+    if (args.feedId !== undefined) {
       this.posts = Posts.retrieve(args.feedId);
     }
 
-    if (args.postId) {
+    if (args.postId !== undefined) {
       this.post = Posts.get(args.postId);
     }
 
