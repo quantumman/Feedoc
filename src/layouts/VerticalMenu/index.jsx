@@ -1,9 +1,6 @@
 import './style.scss';
 
 export default {
-  controller() {
-  },
-
   view(_ctrl, _args, children) {
     return (
       <ul class="vertical-menu">
