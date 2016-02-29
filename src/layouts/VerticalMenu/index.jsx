@@ -3,15 +3,15 @@ import './style.scss';
 export default {
   view(_ctrl, _args, children) {
     return (
-      <ul class="vertical-menu">
+      <div class="vertical-menu layout vertical inline">
         {
           children.map(c => {
-            return <li class="menu-item">
+            return <div class="menu-item">
               {c}
-            </li>;
+            </div>;
           })
         }
-      </ul>
+      </div>
     );
   },
 };
