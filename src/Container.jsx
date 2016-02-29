@@ -15,7 +15,11 @@ const props = {
     }
 
     if (args.postId !== undefined) {
-      this.post = Posts.get(args.postId);
+      this.post = Posts.get(args.postId)
+                       .then(post => {
+                         this.markdown = m.prop(post.content);
+                         return post;
+                       });
     }
 
     this.params = args;
