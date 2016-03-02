@@ -1,0 +1,22 @@
+@import '../../style/common';
+
+.groups-page {
+    height: 100vh;
+    overflow: hidden;
+    .list-view {
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+	&.groups {
+	    width: 10em;
+	}
+	&.posts {
+	    padding-left: 1em;
+	    padding-right: 1em;
+	    width: 22em;
+	}
+	.pe-list-tile__content {
+	    padding: 0.1em 0 0.1em !important;
+	}
+    }
+}
