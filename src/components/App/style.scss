@@ -1,0 +1,12 @@
+@import '../../style/common';
+
+.app {
+    height: 100vh;
+    .nav {
+        text-align: center;
+        .pe-icon {
+            width: 2em;
+            height: 2em;
+        }
+    }
+}
