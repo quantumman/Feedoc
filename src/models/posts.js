@@ -15,11 +15,10 @@ export default {
       data: args,
     });
   },
-  retrieve(feedId, args) {
+  retrieve(args) {
     return m.request({
       method: 'GET',
-      url: `api/feeds/${feedId}/posts`,
-      data: args,
+      url: `api/teams/${args.teamId}/groups/${args.groupId}/posts`,
     });
   },
   update(postId, args) {
