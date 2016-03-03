@@ -7,6 +7,15 @@ import Settings from 'mmsvg/google/msvg/action/settings';
 import Groups from 'mmsvg/google/msvg/av/library-books';
 import Tag from 'mmsvg/templarian/msvg/tag';
 
+const MenuItem = {
+  view(_ctrl, props) {
+    return (
+      <IconButton {...props}
+                  active={ m.route() === props.url.href }
+      />
+    );
+  },
+};
 
 export default {
   view(_ctrl, _props, children) {
