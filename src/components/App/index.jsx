@@ -18,28 +18,29 @@ const MenuItem = {
 };
 
 export default {
-  view(_ctrl, _props, children) {
+  controller() {
+    return {
+      teamId: m.route.param('teamId'),
+    };
+  },
+
+  view(ctrl, _props, children) {
     return (
       <div class="app horizontal layout">
         <div class="nav self-start">
           <VerticalMenu>
-            <IconButton icon={{ msvg: Edit }}
-                        url={{ href: '/new', config: m.route }}
-                        active={ m.route() === '/new' }
+            <MenuItem icon={{ msvg: Edit }}
+                      url={{ href: `/${ctrl.teamId}/new`, config: m.route }}
             />
-            <IconButton icon={{ msvg: Groups }}
-                        url={{ href: '/groups', config: m.route }}
-                        active={ m.route() === '/groups' }
-                        className="foobar"
+            <MenuItem icon={{ msvg: Groups }}
+                      url={{ href: `/${ctrl.teamId}/groups`, config: m.route }}
             />
-            <IconButton icon={{ msvg: Tag }}
-                        url={{ href: '/tags', config: m.route }}
-                        active={ m.route() === '/tags' }
+            <MenuItem icon={{ msvg: Tag }}
+                      url={{ href: `/${ctrl.teamId}/tags`, config: m.route }}
             />
             <div class="spacer"></div>
-            <IconButton icon={{ msvg: Settings }}
-                        url={{ href: '/settings', config: m.route }}
-                        active={ m.route() === '/settings' }
+            <MenuItem icon={{ msvg: Settings }}
+                      url={{ href: `/${ctrl.teamId}/settings`, config: m.route }}
             />
             <div class="border"></div>
           </VerticalMenu>
