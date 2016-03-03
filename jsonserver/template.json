@@ -1,4 +1,22 @@
 {
+  "teams": [
+    {{#repeat 10}}
+    {
+      "id": {{@index}},
+      "name": "{{lorem 2}}"
+    }
+    {{/repeat}}
+  ],
+  "groups": [
+    {{#repeat 20}}
+    {
+      "id": {{@index}},
+      "teamsId": {{int 0 10}},
+      "name": "{{lorem 1}}"
+    }
+    {{/repeat}}
+  ],
+
   "feeds": [
     {{#repeat 4}}
     {
@@ -8,10 +26,10 @@
     {{/repeat}}
   ],
   "posts": [
-    {{#repeat 10}}
+    {{#repeat 1000}}
     {
       "id": {{@index}},
-      "feedId": {{int 0 3}},
+      "groupId": {{int 0 20}},
       "title": "{{lorem 1}}",
       "createdBy": "{{firstName}} {{lastName}}",
       "creator": {
@@ -29,7 +47,7 @@
         {{/repeat}}
       ],
       "createdOn": "{{date '2016' '2020'}}",
-      "content": "I am using __markdown__."
+      "content": "# {{lorem 3}} \n I am using __markdown__. {{@index}} \n * {{lorem 2}} \n * {{lorem 2}} "
     }
     {{/repeat}}
   ]

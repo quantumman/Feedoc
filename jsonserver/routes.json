@@ -1,3 +1,5 @@
 {
-  "/api/": "/"
+  "/api/": "/",
+  "/teams/:id_/groups/:id/posts": "/groups/:id/posts",
+  "/teams/:id_/groups/:id__/posts/:id": "/posts/:id"
 }
