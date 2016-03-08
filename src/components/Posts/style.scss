@@ -1,4 +1,11 @@
 @import '../../style/common';
 
 .posts {
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 22em;
+
+    .pe-list-tile__content {
+        padding: 0.1em 0 0.1em !important;
+    }
 }
