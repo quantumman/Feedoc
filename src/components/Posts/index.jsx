@@ -2,14 +2,22 @@ import './style.scss';
 
 import List from 'polythene/list/list';
 import ListTile from 'polythene/list-tile/list-tile';
+import Icon from 'polythene/icon/icon';
 
 export default {
   view(_ctrl, props) {
     const posts = props.posts || m.prop([]);
 
+    const avatar = p => m(Icon, {
+      type: 'large',
+      class: 'pe-icon--avatar',
+      src: p.creator.avatar,
+    });
+
     const tiles = posts().map(p => {
       return (
         <ListTile title={p.title}
+                  front={avatar(p)}
                   highSubtitle={<div>{p.creator.name}</div>}
                   positionSelected={false}
                   ink={true}
