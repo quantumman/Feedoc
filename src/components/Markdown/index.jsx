@@ -16,7 +16,11 @@ export default {
   view(_ctrl, props) {
     return (
       <div class="markdown">
-        {m.trust(marked(props.src))}
+        {
+          props.src
+          ? m.trust(marked(props.src()))
+          : ''
+        }
       </div>
     );
   },
