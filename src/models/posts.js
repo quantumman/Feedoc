@@ -1,11 +1,11 @@
 import m from 'mithril';
 
 export default {
-  get(postId, args) {
+  get(args) {
     return m.request({
       method: 'GET',
-      url: `api/posts/${postId}`,
-      data: args,
+      url: `api/teams/${args.teamId}/groups/${args.groupId}/posts/${args.postId}`,
+      initialValue: { content: '' },
     });
   },
   create(feedId, args) {
