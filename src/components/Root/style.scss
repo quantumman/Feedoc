@@ -1,4 +1,19 @@
 @import '../../style/common';
 
 .root {
+    height: 100vh;
+    overflow: hidden;
+    .list-view {
+        overflow: auto;
+        margin: 0;
+        padding: 0;
+        &.left {
+            width: 10em;
+        }
+        &.middle {
+            padding-left: 2em;
+            padding-right: 2em;
+            width: 24em;
+        }
+    }
 }
