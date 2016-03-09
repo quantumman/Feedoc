@@ -2,6 +2,10 @@ import m from 'mithril';
 
 export default {
   get(args) {
+    if (!args.teamId || !args.groupId || !args.postId) {
+      return undefined;
+    }
+
     return m.request({
       method: 'GET',
       url: `api/teams/${args.teamId}/groups/${args.groupId}/posts/${args.postId}`,
@@ -16,6 +20,10 @@ export default {
     });
   },
   retrieve(args) {
+    if (!args.teamId || !args.groupId) {
+      return undefined;
+    }
+
     return m.request({
       method: 'GET',
       url: `api/teams/${args.teamId}/groups/${args.groupId}/posts`,
