@@ -11,7 +11,12 @@ config :feedoc, Feedoc.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin"]]
+  watchers: [node: [
+                "node_modules/webpack/bin/webpack.js",
+                "--watch-stdin",
+                "--progress",
+                "--colors"
+              ]]
 
 # Watch static and templates for browser reloading.
 config :feedoc, Feedoc.Endpoint,
