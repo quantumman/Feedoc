@@ -2,6 +2,10 @@
 /node_modules
 /build
 
+_build/
+deps/
+priv/static/js/
+
 .tern-port
 
 npm-debug.log
