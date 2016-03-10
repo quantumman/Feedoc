@@ -4,16 +4,20 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [
-    './src/index.js',
+    './web/static/js/app.js',
   ],
   output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'bundle.js',
+    path: './priv/static/js',
+    filename: 'app.js',
   },
   resolve: {
     root: [path.join(__dirname, 'bower_components')],
-    modulesDirectories: ['node_modules', 'bower_components'],
+    modulesDirectories: ['node_modules', 'bower_components', __dirname + '/web/static/js'],
     extensions: ['', '.js', '.jsx'],
+    alias: {
+      phoenix_html: __dirname + '/deps/phoenix_html/web/static/js/phoenix_html.js',
+      phoenix: __dirname + '/deps/phoenix/web/static/js/phoenix.js',
+    },
   },
   plugins: [
     new webpack.ResolverPlugin(
