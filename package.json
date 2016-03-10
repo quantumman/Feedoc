@@ -28,6 +28,8 @@
     "static-loader": "^0.1.8",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
+    "phoenix": "file:deps/phoenix",
+    "phoenix_html": "file:deps/phoenix_html",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
   },
