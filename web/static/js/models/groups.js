@@ -6,7 +6,7 @@ export default {
     return m.request({ method: 'POST', url: this.url(args), data: args });
   },
   retrieve(args) {
-    return m.request({ method: 'GET', url: this.url(args), data: args });
+    return m.request({ method: 'GET', url: this.url(args) });
   },
   update(args) {
     return m.request({ method: 'PATCH', url: this.url(args), data: args });
