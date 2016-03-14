@@ -5,11 +5,12 @@ defmodule Feedoc.Post do
     field :title, :string
     field :content, :string
     belongs_to :group, Feedoc.Group
+    belongs_to :team, Feedoc.Team
 
     timestamps
   end
 
-  @required_fields ~w(title content group_id)
+  @required_fields ~w(title content group_id team_id)
   @optional_fields ~w()
 
   @doc """
@@ -22,5 +23,6 @@ defmodule Feedoc.Post do
     model
     |> cast(params, @required_fields, @optional_fields)
     |> foreign_key_constraint(:group_id)
+    |> foreign_key_constraint(:team_id)
   end
 end
