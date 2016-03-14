@@ -6,6 +6,7 @@ defmodule Feedoc.Post do
     field :content, :string
     belongs_to :group, Feedoc.Group
     belongs_to :team, Feedoc.Team
+    belongs_to :creator, Feedoc.User, foreign_key: :user_id
 
     timestamps
   end
