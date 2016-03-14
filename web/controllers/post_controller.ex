@@ -6,19 +6,19 @@ defmodule Feedoc.PostController do
   plug :scrub_params, "team_id" when action in [:create, :update]
   plug :scrub_params, "group_id" when action in [:create, :update]
 
-  def index(conn, _params) do
-    posts = Repo.all(Post)
+  def index(conn, params) do
+    posts = Repo.all(Post.belongs_to(params))
     render(conn, "index.json", posts: posts)
   end
 
-  def create(conn, %{"post" => post_params, "team_id" => team_id, "post_id" => post_id}) do
-    changeset = Post.changeset(%Post{}, post_params)
+  def create(conn, %{"team_id" => team_id, "group_id" => group_id} = params) do
+    changeset = Post.changeset(%Post{}, params)
 
     case Repo.insert(changeset) do
       {:ok, post} ->
         conn
         |> put_status(:created)
-        |> put_resp_header("location", team_group_post_path(conn, :show, team_id, post_id, post))
+        |> put_resp_header("location", team_group_post_path(conn, :show, team_id, group_id, post))
         |> render("show.json", post: post)
       {:error, changeset} ->
         conn
@@ -27,13 +27,13 @@ defmodule Feedoc.PostController do
     end
   end
 
-  def show(conn, %{"id" => id}) do
-    post = Repo.get!(Post, id)
+  def show(conn, %{"id" => id, "team_id" => team_id, "group_id" => group_id}) do
+    post = Repo.get_by!(Post, %{id: id, team_id: team_id, group_id: group_id})
     render(conn, "show.json", post: post)
   end
 
-  def update(conn, %{"id" => id, "post" => post_params}) do
-    post = Repo.get!(Post, id)
+  def update(conn, %{"id" => id, "post" => post_params, "team_id" => team_id, "group_id" => group_id}) do
+    post = Repo.get_by!(Post, %{id: id, team_id: team_id, group_id: group_id})
     changeset = Post.changeset(post, post_params)
 
     case Repo.update(changeset) do
@@ -46,8 +46,8 @@ defmodule Feedoc.PostController do
     end
   end
 
-  def delete(conn, %{"id" => id}) do
-    post = Repo.get!(Post, id)
+  def delete(conn, %{"id" => id, "team_id" => team_id, "group_id" => group_id}) do
+    post = Repo.get_by!(Post, %{id: id, team_id: team_id, group_id: group_id})
 
     # Here we use delete! (with a bang) because we expect
     # it to always work (and if it does not, it will raise).
