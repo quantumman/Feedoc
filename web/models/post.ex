@@ -25,4 +25,10 @@ defmodule Feedoc.Post do
     |> foreign_key_constraint(:group_id)
     |> foreign_key_constraint(:team_id)
   end
+
+  def belongs_to(%{"team_id" => team_id, "group_id" => group_id}) do
+    from p in Feedoc.Post,
+    where: p.team_id == ^team_id and p.group_id == ^group_id,
+    select: p
+  end
 end
