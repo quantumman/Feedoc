@@ -9,13 +9,20 @@ defmodule Feedoc.PostView do
     %{id: post.id,
       title: post.title,
       content: post.content,
-      group_id: post.group_id
-     }
+      group_id: post.group_id,
+      creator: %{
+        avatar: "http://www.gravatar.com/avatar/00000000000000000000000000000000",
+        name: "dummy"
+      }}
   end
 
   def render("post.json", %{post: post}) do
     %{id: post.id,
       title: post.title,
-      group_id: post.group_id}
+      group_id: post.group_id,
+      creator: %{
+        avatar: "http://www.gravatar.com/avatar/00000000000000000000000000000000",
+        name: "dummy"
+      }}
   end
 end
