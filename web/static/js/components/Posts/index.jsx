@@ -41,7 +41,7 @@ export default {
                   positionSelected={false}
                   ink={true}
                   url={{
-                    href: `/${props.teamId}/groups/${p.groupId}/posts/${p.id}`,
+                    href: `/${props.teamId}/groups/${p.group_id}/posts/${p.id}`,
                     config: m.route,
                   }}
                   secondary={secondary(p)}
