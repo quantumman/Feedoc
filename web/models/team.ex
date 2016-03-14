@@ -4,6 +4,7 @@ defmodule Feedoc.Team do
   schema "teams" do
     field :name, :string
     has_many :groups, Feedoc.Group
+    has_many :posts, Feedoc.Post
 
     timestamps
   end
