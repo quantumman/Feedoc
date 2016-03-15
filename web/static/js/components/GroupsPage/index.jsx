@@ -3,7 +3,7 @@ import './style.scss';
 import { Root, LeftView, MiddleView, RightView } from '../Root';
 import GroupList from '../Groups';
 import PostList from '../Posts';
-import Markdown from '../Markdown';
+import Post from '../Post';
 
 import Groups from '../../models/groups';
 import Posts from '../../models/posts';
@@ -29,7 +29,7 @@ export default {
           <PostList {...ctrl} />
         </MiddleView>
         <RightView>
-          <Markdown {...ctrl} />
+          <Post {...ctrl} />
         </RightView>
       </Root>
     );
