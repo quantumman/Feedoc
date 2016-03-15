@@ -17,7 +17,7 @@ export default {
       <IconButton
           icon={{ msvg: ModeEdit }}
           url={{
-            href: `/feeds/${props.params.feedId}/posts/${props.params.postId}/edit`,
+            href: `/${props.teamId}/groups/${props.groupId}/posts/${props.postId}/edit`,
             config: m.route,
           }}
       />,
@@ -25,7 +25,7 @@ export default {
     return (
       <div class="post">
         <Toolbar content={toolbar} />
-        <Markdown src={props.post().content} />
+        <Markdown src={props.src} />
       </div>
     );
   },
