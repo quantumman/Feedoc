@@ -3,15 +3,13 @@ defmodule Feedoc.TeamController do
 
   alias Feedoc.Team
 
-  plug :scrub_params, "team" when action in [:create, :update]
-
   def index(conn, _params) do
     teams = Repo.all(Team)
     render(conn, "index.json", teams: teams)
   end
 
-  def create(conn, %{"team" => team_params}) do
-    changeset = Team.changeset(%Team{}, team_params)
+  def create(conn, params) do
+    changeset = Team.changeset(%Team{}, params)
 
     case Repo.insert(changeset) do
       {:ok, team} ->
@@ -31,9 +29,9 @@ defmodule Feedoc.TeamController do
     render(conn, "show.json", team: team)
   end
 
-  def update(conn, %{"id" => id, "team" => team_params}) do
+  def update(conn, %{"id" => id} = params) do
     team = Repo.get!(Team, id)
-    changeset = Team.changeset(team, team_params)
+    changeset = Team.changeset(team, params)
 
     case Repo.update(changeset) do
       {:ok, team} ->
