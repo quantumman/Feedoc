@@ -3,7 +3,12 @@ defmodule Feedoc.PostTest do
 
   alias Feedoc.Post
 
-  @valid_attrs %{content: "some content", title: "some content"}
+  @valid_attrs %{
+    content: "some content",
+    title: "some content",
+    group_id: 1,
+    team_id: 2
+  }
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do
