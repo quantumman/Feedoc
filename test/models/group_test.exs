@@ -3,7 +3,7 @@ defmodule Feedoc.GroupTest do
 
   alias Feedoc.Group
 
-  @valid_attrs %{name: "some content"}
+  @valid_attrs %{name: "some content", team_id: 1}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do
