@@ -32,9 +32,9 @@ defmodule Feedoc.PostController do
     render(conn, "show.json", post: post)
   end
 
-  def update(conn, %{"id" => id, "post" => post_params, "team_id" => team_id, "group_id" => group_id}) do
+  def update(conn, %{"id" => id, "team_id" => team_id, "group_id" => group_id} = params) do
     post = Repo.get_by!(Post, %{id: id, team_id: team_id, group_id: group_id})
-    changeset = Post.changeset(post, post_params)
+    changeset = Post.changeset(post, params)
 
     case Repo.update(changeset) do
       {:ok, post} ->
