@@ -3,18 +3,15 @@ defmodule Feedoc.GroupController do
 
   alias Feedoc.Group
 
-  plug :scrub_params, "group" when action in [:create, :update]
+  plug :scrub_params, "team_id"
 
   def index(conn, %{"team_id" => team_id}) do
     groups = Repo.all(Group.of_team(team_id))
     render(conn, "index.json", groups: groups)
   end
 
-  def create(conn, %{"group" => group_params, "team_id" => team_id}) do
-    changeset = Group.changeset(
-      %Group{},
-      Map.merge(group_params, %{"team_id" => team_id})
-    )
+  def create(conn, %{"team_id" => team_id} = params) do
+    changeset = Group.changeset(%Group{}, params)
 
     case Repo.insert(changeset) do
       {:ok, group} ->
@@ -34,9 +31,9 @@ defmodule Feedoc.GroupController do
     render(conn, "show.json", group: group)
   end
 
-  def update(conn, %{"id" => id, "group" => group_params}) do
+  def update(conn, %{"id" => id} = params) do
     group = Repo.get!(Group, id)
-    changeset = Group.changeset(group, group_params)
+    changeset = Group.changeset(group, params)
 
     case Repo.update(changeset) do
       {:ok, group} ->
@@ -48,8 +45,8 @@ defmodule Feedoc.GroupController do
     end
   end
 
-  def delete(conn, %{"id" => id}) do
-    group = Repo.get!(Group, id)
+  def delete(conn, %{"id" => id, "team_id" => team_id} = params) do
+    group = Repo.get_by!(Group, %{id: id, team_id: team_id})
 
     # Here we use delete! (with a bang) because we expect
     # it to always work (and if it does not, it will raise).
