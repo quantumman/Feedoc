@@ -7,7 +7,7 @@ defmodule Feedoc.GroupController do
   plug :scrub_params, "id" when action in [:show, :update, :delete]
 
   def index(conn, %{"team_id" => team_id}) do
-    groups = Repo.all(Group.of_team(team_id))
+    groups = Repo.all(Group.belongs_to(team_id))
     render(conn, "index.json", groups: groups)
   end
 
