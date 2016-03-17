@@ -12,18 +12,15 @@ defmodule Feedoc.GroupControllerTest do
   end
 
   test "lists all entries on index", %{conn: conn, team: team} do
+    groups = Enum.map 1..5, fn(_) -> Factory.create(:group, %{team_id: team.id}) end
     conn = get conn, team_group_path(conn, :index, team.id)
-    assert json_response(conn, 200) == []
+    assert json_response(conn, 200) == Enum.map groups, &to_response(&1)
   end
 
   test "shows chosen resource", %{conn: conn, team: team} do
     group = Factory.create(:group, %{team_id: team.id})
     conn = get conn, team_group_path(conn, :show, team.id, group)
-    assert json_response(conn, 200) == %{
-      "id" => group.id,
-      "name" => group.name,
-      "team_id" => group.team_id
-    }
+    assert json_response(conn, 200) == to_response group
   end
 
   test "does not show resource and instead throw error when id is nonexistent", %{conn: conn, team: team} do
@@ -62,5 +59,13 @@ defmodule Feedoc.GroupControllerTest do
     conn = delete conn, team_group_path(conn, :delete, team.id, group)
     assert response(conn, 204)
     refute Repo.get(Group, group.id)
+  end
+
+  defp to_response(group) do
+    %{
+      "id" => group.id,
+      "team_id" => group.team_id,
+      "name" => group.name
+    }
   end
 end
