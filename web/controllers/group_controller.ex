@@ -46,7 +46,7 @@ defmodule Feedoc.GroupController do
     end
   end
 
-  def delete(conn, %{"id" => id, "team_id" => team_id} = params) do
+  def delete(conn, %{"id" => id, "team_id" => team_id}) do
     group = Repo.get_by!(Group, %{id: id, team_id: team_id})
 
     # Here we use delete! (with a bang) because we expect
