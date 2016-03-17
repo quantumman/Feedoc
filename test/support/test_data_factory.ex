@@ -7,19 +7,19 @@ defmodule Feedoc.TestDataFactory do
 
   def factory(:team) do
     %Team{
-      name: "test.example.com"
+      name: Faker.Internet.domain_suffix(),
     }
   end
 
   def factory(:group) do
     %Group{
-      name: "example group"
+      name: Faker.Lorem.Shakespeare.En.hamlet()
     }
   end
 
   def factory(:post) do
     %Post{
-      title: "example title",
+      title: Faker.Commerce.En.product_name(),
       content: "#Markdown"
     }
   end
