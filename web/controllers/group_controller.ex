@@ -4,7 +4,7 @@ defmodule Feedoc.GroupController do
   alias Feedoc.Group
 
   plug :scrub_params, "team_id"
-  plug :scrub_params, "id" when action in [:show, :update]
+  plug :scrub_params, "id" when action in [:show, :update, :delete]
 
   def index(conn, %{"team_id" => team_id}) do
     groups = Repo.all(Group.of_team(team_id))
