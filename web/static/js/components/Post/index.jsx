@@ -8,11 +8,13 @@ import Markdown from '../Markdown';
 
 export default {
   view(_ctrl, props) {
+    const post = props.post || m.prop({ title: '' });
+
     const toolbar = [
       <IconButton icon={{ msvg: IconArrowBack }}
                   events={{ onclick: () => window.history.back() }} />,
       <span class="flex">
-        <h3 class="fixed-header-panel__title">{props.post().title}</h3>
+        <h3 class="fixed-header-panel__title">{post().title}</h3>
       </span>,
       <IconButton
           icon={{ msvg: ModeEdit }}
