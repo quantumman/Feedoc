@@ -11,17 +11,17 @@ defmodule Feedoc.TeamControllerTest do
   end
 
   test "lists all entries on index", %{conn: conn} do
+    teams = Enum.map 1..4, fn(_) -> Factory.create(:team) end
     conn = get conn, team_path(conn, :index)
-    assert json_response(conn, 200) == []
+    assert json_response(conn, 200) == Enum.map teams, &to_response(&1)
   end
 
   test "shows chosen resource", %{conn: conn} do
+    _ = Factory.create(:team)
     team = Factory.create(:team)
+    _ = Factory.create(:team)
     conn = get conn, team_path(conn, :show, team)
-    assert json_response(conn, 200) == %{
-      "id" => team.id,
-      "name" => team.name
-    }
+    assert json_response(conn, 200) == to_response team
   end
 
   test "does not show resource and instead throw error when id is nonexistent", %{conn: conn} do
@@ -42,7 +42,9 @@ defmodule Feedoc.TeamControllerTest do
   end
 
   test "updates and renders chosen resource when data is valid", %{conn: conn} do
+    _ = Factory.create(:team)
     team = Factory.create(:team)
+    _ = Factory.create(:team)
     conn = put conn, team_path(conn, :update, team), @valid_attrs
     assert json_response(conn, 200)["name"] == @valid_attrs[:name]
     assert Repo.get_by(Team, @valid_attrs)
@@ -59,5 +61,12 @@ defmodule Feedoc.TeamControllerTest do
     conn = delete conn, team_path(conn, :delete, team)
     assert response(conn, 204)
     refute Repo.get(Team, team.id)
+  end
+
+  defp to_response(team) do
+    %{
+      "id" => team.id,
+      "name" => team.name
+    }
   end
 end
