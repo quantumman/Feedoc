@@ -30,6 +30,6 @@ defmodule Feedoc.Post do
   def belongs_to(%{"team_id" => team_id, "group_id" => group_id}) do
     from p in Feedoc.Post,
     where: p.team_id == ^team_id and p.group_id == ^group_id,
-    select: p
+    order_by: p.id
   end
 end
