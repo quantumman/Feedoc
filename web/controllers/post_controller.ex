@@ -4,7 +4,7 @@ defmodule Feedoc.PostController do
   alias Feedoc.Post
 
   plug :scrub_params, "team_id"
-  plug :scrub_params, "group_id" when action in [:create, :update]
+  plug :scrub_params, "group_id"
 
   def index(conn, params) do
     posts = Repo.all(Post.belongs_to(params))
