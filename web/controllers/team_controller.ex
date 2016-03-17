@@ -3,7 +3,7 @@ defmodule Feedoc.TeamController do
 
   alias Feedoc.Team
 
-  plug :scrub_params, "id" when action in [:show]
+  plug :scrub_params, "id" when action in [:show, :update]
 
   def index(conn, _params) do
     teams = Repo.all(Team)
