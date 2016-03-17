@@ -13,8 +13,9 @@ defmodule Feedoc.PostControllerTest do
   end
 
   test "lists all entries on index", %{conn: conn, team: team, group: group} do
+    posts = Enum.map 1..7, fn(_) -> Factory.create(:post, group_id: group.id, team_id: team.id) end
     conn = get conn, team_group_post_path(conn, :index, team.id, group.id)
-    assert json_response(conn, 200) == []
+    assert json_response(conn, 200) == Enum.map posts, &to_response(&1)
   end
 
   test "shows chosen resource", %{conn: conn, team: team, group: group} do
@@ -67,5 +68,17 @@ defmodule Feedoc.PostControllerTest do
     conn = delete conn, team_group_post_path(conn, :delete, team.id, group.id, post)
     assert response(conn, 204)
     refute Repo.get(Post, post.id)
+  end
+
+  defp to_response(post) do
+    %{
+      "id" => post.id,
+      "title" => post.title,
+      "group_id" => post.group_id,
+      "creator" => %{
+        "avatar" => "http://www.gravatar.com/avatar/00000000000000000000000000000000",
+        "name" => "dummy"
+      }
+    }
   end
 end
