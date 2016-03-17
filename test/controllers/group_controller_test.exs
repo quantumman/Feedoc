@@ -30,7 +30,6 @@ defmodule Feedoc.GroupControllerTest do
   end
 
   test "creates and renders resource when data is valid", %{conn: conn, team: team} do
-    group = Factory.create(:group, %{team_id: team.id})
     conn = post conn, team_group_path(conn, :create, team.id), @valid_attrs
     assert json_response(conn, 201)["id"]
     assert Repo.get_by(Group, @valid_attrs)
