@@ -24,12 +24,6 @@ defmodule Feedoc.Group do
     |> foreign_key_constraint(:team_id)
   end
 
-  def of_team(id) do
-    from g in Feedoc.Group,
-    where: g.team_id == ^id,
-    select: g
-  end
-
   def belongs_to(team_id) do
     from g in Feedoc.Group,
     where: g.team_id == ^team_id,
