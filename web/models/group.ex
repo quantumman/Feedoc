@@ -29,4 +29,10 @@ defmodule Feedoc.Group do
     where: g.team_id == ^id,
     select: g
   end
+
+  def belongs_to(team_id) do
+    from g in Feedoc.Group,
+    where: g.team_id == ^team_id,
+    order_by: g.id
+  end
 end
