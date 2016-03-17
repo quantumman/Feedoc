@@ -3,7 +3,7 @@ defmodule Feedoc.PostController do
 
   alias Feedoc.Post
 
-  plug :scrub_params, "team_id" when action in [:create, :update]
+  plug :scrub_params, "team_id"
   plug :scrub_params, "group_id" when action in [:create, :update]
 
   def index(conn, params) do
