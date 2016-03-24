@@ -106,8 +106,7 @@ exports.config = {
   // See the full list at http://mochajs.org/
   mochaOpts: {
     ui: 'bdd',
-    compilers: ['js:babel-core/register'],
-    requires: ['intelli-espower-loader']
+    compilers: ['js:espower-babel/guess']
   },
   //
   // =====
