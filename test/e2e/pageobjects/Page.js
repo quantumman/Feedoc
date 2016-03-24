@@ -15,6 +15,10 @@ export default class Page {
     _go('new');
   }
 
+  groups() {
+    _go('groups');
+  }
+
   _go(id) {
     return browser.click(id);
   }
