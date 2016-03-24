@@ -29,17 +29,21 @@ export default {
       <div class="app horizontal layout">
         <div class="nav self-start">
           <VerticalMenu>
-            <MenuItem icon={{ msvg: Edit }}
+            <MenuItem id="new"
+                      icon={{ msvg: Edit }}
                       url={{ href: `/${ctrl.name}/new`, config: m.route }}
             />
-            <MenuItem icon={{ msvg: Groups }}
+            <MenuItem id="groups"
+                      icon={{ msvg: Groups }}
                       url={{ href: `/${ctrl.name}/groups`, config: m.route }}
             />
-            <MenuItem icon={{ msvg: Tag }}
+            <MenuItem id="tags"
+                      icon={{ msvg: Tag }}
                       url={{ href: `/${ctrl.name}/tags`, config: m.route }}
             />
             <div class="spacer"></div>
-            <MenuItem icon={{ msvg: Settings }}
+            <MenuItem id="settings"
+                      icon={{ msvg: Settings }}
                       url={{ href: `/${ctrl.name}/settings`, config: m.route }}
             />
             <div class="border"></div>
