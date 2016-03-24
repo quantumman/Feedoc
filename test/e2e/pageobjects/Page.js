@@ -19,6 +19,10 @@ export default class Page {
     _go('groups');
   }
 
+  tags() {
+    _go('tags');
+  }
+
   _go(id) {
     return browser.click(id);
   }
