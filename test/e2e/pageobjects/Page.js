@@ -23,6 +23,10 @@ export default class Page {
     _go('tags');
   }
 
+  settings() {
+    _go('setting');
+  }
+
   _go(id) {
     return browser.click(id);
   }
