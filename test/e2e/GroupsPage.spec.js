@@ -6,4 +6,10 @@ describe('GroupsPage', () => {
   before(() => {
     page.open();
   });
+
+  it('should show groups', () => {
+    page.groups.forEach(g => {
+      assert(g.title);
+    });
+  });
 });
