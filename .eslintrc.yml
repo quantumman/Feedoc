@@ -10,3 +10,5 @@ globals:
   m: true,
   $: true,
   jQuery: true
+env:
+  mocha: true
