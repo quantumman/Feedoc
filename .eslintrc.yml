@@ -9,6 +9,7 @@ rules:
 globals:
   m: true,
   $: true,
-  jQuery: true
+  jQuery: true,
+  browser: true
 env:
   mocha: true
