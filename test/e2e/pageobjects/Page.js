@@ -10,4 +10,12 @@ export default class Page {
   open(path) {
     browser.url('/?/' + path);
   }
+
+  new() {
+    _go('new');
+  }
+
+  _go(id) {
+    return browser.click(id);
+  }
 }
