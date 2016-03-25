@@ -1,7 +1,7 @@
 defmodule Feedoc.PostControllerTest do
   use Feedoc.ConnCase
 
-  alias Feedoc.TestDataFactory, as: Factory
+  alias Data.Factory
   alias Feedoc.Post
   @valid_attrs %{content: "some content", title: "some content"}
   @invalid_attrs %{content: nil, title: nil}

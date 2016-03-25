@@ -1,7 +1,7 @@
 defmodule Feedoc.GroupControllerTest do
   use Feedoc.ConnCase
 
-  alias Feedoc.TestDataFactory, as: Factory
+  alias Data.Factory
   alias Feedoc.Group
   @valid_attrs %{name: "some content"}
   @invalid_attrs %{name: nil}
