@@ -18,6 +18,11 @@ defmodule Feedoc.TeamTest do
     refute changeset.valid?
   end
 
+  test "changeset with invalid name attributes" do
+    changeset = Team.changeset(%Team{}, %{name: "A B C"})
+    refute changeset.valid?
+  end
+
   test "chagneset with unique attribute" do
     Repo.insert(Team.changeset(%Team{}, @unique_attrs))
     {:error, changeset} = Repo.insert(Team.changeset(%Team{}, @unique_attrs))

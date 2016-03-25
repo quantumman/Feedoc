@@ -21,6 +21,7 @@ defmodule Feedoc.Team do
   def changeset(model, params \\ :empty) do
     model
     |> cast(params, @required_fields, @optional_fields)
+    |> validate_format(:name, ~r/^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}$/)
     |> unique_constraint(:name)
   end
 end

@@ -3,7 +3,7 @@ defmodule Feedoc.TeamControllerTest do
 
   alias Data.Factory
   alias Feedoc.Team
-  @valid_attrs %{name: "some content"}
+  @valid_attrs %{name: "somecontent"}
   @invalid_attrs %{name: nil}
 
   setup %{conn: conn} do
