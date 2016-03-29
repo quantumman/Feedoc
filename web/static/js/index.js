@@ -9,13 +9,13 @@ import GroupsPage from './components/GroupsPage';
 const noop = {};
 
 const routes = {
-  '/:teamId': noop,
-  '/:teamId/new': noop,
-  '/:teamId/groups': GroupsPage,
-  '/:teamId/groups/:groupId/posts': GroupsPage,
-  '/:teamId/groups/:groupId/posts/:postId': GroupsPage,
-  '/:teamId/tags': noop,
-  '/:teamId/settings': noop,
+  '/:name': GroupsPage,
+  '/:name/new': noop,
+  '/:name/groups': GroupsPage,
+  '/:name/groups/:groupId/posts': GroupsPage,
+  '/:name/groups/:groupId/posts/:postId': GroupsPage,
+  '/:name/tags': noop,
+  '/:name/settings': noop,
 };
 
 m.route(document.body, '/', routes);

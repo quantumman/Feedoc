@@ -12,7 +12,7 @@ export default {
         <ListTile title={g.name}
                   positionSelected={false}
                   ink={false}
-                  url={{ href: `/${props.teamId}/groups/${g.id}/posts`, config: m.route }}
+                  url={{ href: `/${props.name}/groups/${g.id}/posts`, config: m.route }}
         />
       );
     });

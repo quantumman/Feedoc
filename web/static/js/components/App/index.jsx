@@ -20,7 +20,7 @@ const MenuItem = {
 export default {
   controller() {
     return {
-      teamId: m.route.param('teamId'),
+      name: m.route.param('name'),
     };
   },
 
@@ -30,17 +30,17 @@ export default {
         <div class="nav self-start">
           <VerticalMenu>
             <MenuItem icon={{ msvg: Edit }}
-                      url={{ href: `/${ctrl.teamId}/new`, config: m.route }}
+                      url={{ href: `/${ctrl.name}/new`, config: m.route }}
             />
             <MenuItem icon={{ msvg: Groups }}
-                      url={{ href: `/${ctrl.teamId}/groups`, config: m.route }}
+                      url={{ href: `/${ctrl.name}/groups`, config: m.route }}
             />
             <MenuItem icon={{ msvg: Tag }}
-                      url={{ href: `/${ctrl.teamId}/tags`, config: m.route }}
+                      url={{ href: `/${ctrl.name}/tags`, config: m.route }}
             />
             <div class="spacer"></div>
             <MenuItem icon={{ msvg: Settings }}
-                      url={{ href: `/${ctrl.teamId}/settings`, config: m.route }}
+                      url={{ href: `/${ctrl.name}/settings`, config: m.route }}
             />
             <div class="border"></div>
           </VerticalMenu>
