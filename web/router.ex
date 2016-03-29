@@ -22,7 +22,8 @@ defmodule Feedoc.Router do
   scope "/api", Feedoc do
     pipe_through :api
 
-    resources "/teams", TeamController, except: [:new, :edit] do
+    resources "/teams", TeamController, only: [:show], param: "name"
+    resources "/teams", TeamController, except: [:show, :new, :edit] do
       resources "/groups", GroupController, except: [:new, :edit] do
         resources "/posts", PostController, except: [:new, :edit]
       end

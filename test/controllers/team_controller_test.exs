@@ -20,7 +20,7 @@ defmodule Feedoc.TeamControllerTest do
     _ = Factory.setup(:team)
     team = Factory.setup(:team)
     _ = Factory.setup(:team)
-    conn = get conn, team_path(conn, :show, team)
+    conn = get conn, team_path(conn, :show, team.name)
     assert json_response(conn, 200) == to_response team
   end
 

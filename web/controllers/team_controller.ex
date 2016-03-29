@@ -3,7 +3,8 @@ defmodule Feedoc.TeamController do
 
   alias Feedoc.Team
 
-  plug :scrub_params, "id" when action in [:show, :update, :delete]
+  plug :scrub_params, "id" when action in [:update, :delete]
+  plug :scrub_params, "name" when action in [:show]
 
   def index(conn, _params) do
     teams = Repo.all(Team)
@@ -26,8 +27,8 @@ defmodule Feedoc.TeamController do
     end
   end
 
-  def show(conn, %{"id" => id}) do
-    team = Repo.get!(Team, id)
+  def show(conn, %{"name" => name}) do
+    team = Repo.get_by!(Team, name: name)
     render(conn, "show.json", team: team)
   end
 
