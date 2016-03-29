@@ -7,7 +7,7 @@ defmodule Data.Factory do
 
   def factory(:team) do
     %Team{
-      name: Faker.Internet.domain_suffix(),
+      name: Faker.Internet.domain_suffix()
     }
   end
 
