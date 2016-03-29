@@ -21,6 +21,9 @@ defmodule Feedoc.TeamTest do
   test "changeset with invalid name attributes" do
     changeset = Team.changeset(%Team{}, %{name: "A B C"})
     refute changeset.valid?
+
+    changeset = Team.changeset(%Team{}, %{name: "foobar.net"})
+    refute changeset.valid?
   end
 
   test "chagneset with unique attribute" do
