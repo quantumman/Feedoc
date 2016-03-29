@@ -10,12 +10,6 @@ defmodule Feedoc.TeamControllerTest do
     {:ok, conn: put_req_header(conn, "accept", "application/json")}
   end
 
-  test "lists all entries on index", %{conn: conn} do
-    teams = Enum.map 1..4, fn(_) -> Factory.setup(:team) end
-    conn = get conn, team_path(conn, :index)
-    assert json_response(conn, 200) == Enum.map teams, &to_response(&1)
-  end
-
   test "shows chosen resource", %{conn: conn} do
     _ = Factory.setup(:team)
     team = Factory.setup(:team)
@@ -39,28 +33,6 @@ defmodule Feedoc.TeamControllerTest do
   test "does not create resource and renders errors when data is invalid", %{conn: conn} do
     conn = post conn, team_path(conn, :create), @invalid_attrs
     assert json_response(conn, 422)["errors"] != %{}
-  end
-
-  test "updates and renders chosen resource when data is valid", %{conn: conn} do
-    _ = Factory.setup(:team)
-    team = Factory.setup(:team)
-    _ = Factory.setup(:team)
-    conn = put conn, team_path(conn, :update, team), @valid_attrs
-    assert json_response(conn, 200)["name"] == @valid_attrs[:name]
-    assert Repo.get_by(Team, @valid_attrs)
-  end
-
-  test "does not update chosen resource and renders errors when data is invalid", %{conn: conn} do
-    team = Factory.create(:team)
-    conn = put conn, team_path(conn, :update, team), @invalid_attrs
-    assert json_response(conn, 422)["errors"] != %{}
-  end
-
-  test "deletes chosen resource", %{conn: conn} do
-    team = Factory.create(:team)
-    conn = delete conn, team_path(conn, :delete, team)
-    assert response(conn, 204)
-    refute Repo.get(Team, team.id)
   end
 
   defp to_response(team) do
